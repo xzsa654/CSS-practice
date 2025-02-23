@@ -1,0 +1,28 @@
+* {
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  font-family: "Microsoft YaHei", sans-serif;
+  color: #333;
+  background-color: white;
+  min-width: 1226px;
+}
+
+a {
+  text-decoration: none;
+  color: inherit;
+}
+
+.w {
+  width: 1226px;
+  margin: 0 auto;
+}
+
+.clearfix::before,
+.clearfix::after {
+  content: "";
+  display: table;
+  clear: both;
+}

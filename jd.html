@@ -1,0 +1,327 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <link rel="stylesheet" href="./fontawesome-free-6.6.0-web/css/all.css" />
+    <style>
+      * {
+        margin: 0;
+        padding: 0;
+      }
+      body {
+        font-size: 12px;
+        color: #99999999;
+        background-color: bisque;
+      }
+      a {
+        color: inherit;
+        text-decoration: none;
+      }
+      .outer {
+        min-width: 1404px;
+        height: 31px;
+        background-color: #e3e4e5;
+        border-bottom: 1px solid #ddd;
+      }
+      .menu {
+        width: 1296px;
+        height: 30px;
+        margin: 0 auto;
+        color: #9999;
+        position: relative;
+      }
+      .current {
+        width: 42px;
+        height: 30px;
+        padding: 0 7px;
+        border: 1px transparent solid;
+        border-bottom: none;
+        position: relative;
+        line-height: 30px;
+      }
+      .city {
+        float: left;
+        position: relative;
+      }
+      .city:hover span {
+        color: red;
+      }
+      .city:hover .current {
+        position: relative;
+        border-color: #ccc;
+        background-color: #fff;
+        z-index: 99;
+      }
+      .city i {
+        color: red;
+      }
+      .city:hover .hideCity {
+        display: block;
+      }
+
+      .user-list {
+        float: right;
+      }
+      .user-list li {
+        float: left;
+        list-style: none;
+        line-height: 30px;
+        padding: 0 7px;
+      }
+      .line {
+        float: left;
+      }
+      .user-list li:hover,
+      .pp a:hover,
+      .hot {
+        color: red;
+      }
+      .line {
+        height: 10px;
+        border-left: 1px solid #9999;
+        margin: 10px 5px 0px;
+      }
+      .pp {
+        width: 76px;
+        box-sizing: border-box;
+      }
+      .hideCity {
+        width: 300px;
+        height: 333px;
+        padding: 10px;
+        background-color: #fff;
+        position: absolute;
+        border: 1px solid #ccc;
+        display: none;
+        top: 31px;
+      }
+      .current {
+        white-space: nowrap;
+        padding: 0 20px 2px 0;
+        border: 1px solid transparent;
+        border-bottom: none;
+        height: 29px;
+        position: relative;
+      }
+      .pp:hover .current {
+        border-color: #ddd;
+        background-color: #fff;
+        position: relative;
+        z-index: 999;
+      }
+      .hide {
+        width: 280px;
+        height: 230px;
+        border: 1px solid #ddd;
+        background-color: #fff;
+        position: absolute;
+        top: 31px;
+        display: none;
+      }
+      .pp:hover .hide {
+        display: block;
+      }
+
+      .purchase .hide {
+        width: 154px;
+        height: 190px;
+        padding: 10px 0 10px 12px;
+        box-sizing: border-box;
+      }
+      .service {
+        position: relative;
+      }
+      .service .hide {
+        width: 172px;
+        height: 94px;
+        padding: 10px 0;
+        right: 5px;
+      }
+      .gps .hide {
+        width: 1190px;
+        height: 157px;
+        right: -84px;
+      }
+
+      .hide-service .item {
+        box-sizing: border-box;
+        margin-left: 5px;
+        padding: 10px;
+        color: #ccc;
+        display: inline;
+      }
+      .purchase-hide .item {
+        float: left;
+        max-width: 78px;
+        height: 24px;
+        min-width: 38px;
+        color: #ccc;
+        white-space: nowrap;
+      }
+
+      .purchase-hide .item:nth-child(odd) {
+        padding-right: 11px;
+      }
+      .purchase-hide .bb {
+        width: 100%;
+        clear: both;
+      }
+      .list {
+        width: 280px;
+        height: 70px;
+        padding: 10px 0 10px 15px;
+        color: #ccc;
+        box-sizing: border-box;
+      }
+      .type1,
+      .type2,
+      .type3 {
+        float: left;
+      }
+      .type2 {
+        padding: 0 30px;
+      }
+
+      .list2 {
+        border-top: 1px solid #ddd;
+        border-bottom: 1px solid #ddd;
+      }
+      .list3 {
+        height: 93px;
+        padding: 10px 0 10px 15px;
+      }
+      .tiem {
+        float: left;
+        width: 88px;
+        height: 22px;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="outer">
+      <div class="menu">
+        <div class="city">
+          <div class="current">
+            <i class="fa-solid fa-map-marker-alt"></i>
+            <span>台灣</span>
+          </div>
+          <div class="hideCity"></div>
+        </div>
+        <ul class="user-list">
+          <li>
+            <a href="#">你好，請登陸</a>
+          </li>
+          <li>
+            <a class="hot" href="#">免費註冊</a>
+          </li>
+          <span class="line"></span>
+          <li>
+            <a href="#">我的訂單</a>
+          </li>
+          <span class="line"></span>
+          <li class="myJd pp">
+            <div class="current">
+              <a href="#">我的京東</a>
+              <i class="fa-solid fa-chevron-down"></i>
+            </div>
+            <div class="hide">
+              <div class="list list1">
+                <div class="type1">
+                  <div class="item"><a href="#">待修改訂單</a></div>
+                  <div class="item"><a href="#">返修退換貨</a></div>
+                </div>
+                <div class="type2">
+                  <div class="item"><a href="#">我的問答</a></div>
+                  <div class="item"><a href="#">我的關注</a></div>
+                </div>
+                <div class="type3">
+                  <div class="item"><a href="#">降價商品</a></div>
+                </div>
+              </div>
+
+              <div class="list list2">
+                <div class="type1">
+                  <div class="item"><a href="#">我的京豆</a></div>
+                  <div class="item"><a href="#">我的理財</a></div>
+                </div>
+                <div class="type2">
+                  <div class="item"><a href="#">我的優惠券</a></div>
+                </div>
+                <div class="type3">
+                  <div class="item"><a href="#">我的白條</a></div>
+                </div>
+              </div>
+              <div class="list list3">
+                <div class="tiem"><a href="#">幫助中心</a></div>
+                <div class="tiem"><a href="#">售後服務</a></div>
+                <div class="tiem"><a href="#">在線客服</a></div>
+                <div class="tiem"><a href="#">意見建議</a></div>
+                <div class="tiem"><a href="#">電話客服</a></div>
+                <div class="tiem"><a href="#">客服郵件</a></div>
+                <div class="tiem"><a href="#">金融諮詢</a></div>
+                <div class="tiem"><a href="#">全球售客服</a></div>
+                <div class="tiem"><a href="#">企業客服</a></div>
+              </div>
+            </div>
+          </li>
+          <span class="line"></span>
+          <li class="purchase pp">
+            <div class="current">
+              <a class="hot" href="#">企業採購</a>
+              <i class="fa-solid fa-chevron-down"></i>
+            </div>
+            <div class="hide purchase-hide">
+              <div class="item"><a href="#">企業團購</a></div>
+              <div class="item"><a href="#">京東工采</a></div>
+              <div class="item"><a href="#">公共採購</a></div>
+              <div class="item"><a href="#">京東慧采</a></div>
+              <div class="item"><a href="#">京東錦禮</a></div>
+              <div class="item"><a href="#">禮品卡</a></div>
+              <div class="item"><a href="#">微信企業購</a></div>
+              <div class="item"><a href="#">工業品</a></div>
+              <div class="item bb"><a href="#">京東工品匯</a></div>
+              <div class="item"><a href="#">企業購專業版</a></div>
+              <div class="item"><a href="#">大中型客戶採購</a></div>
+            </div>
+          </li>
+          <span class="line"></span>
+          <li class="service pp">
+            <div class="current">
+              <span> 商家服務</span>
+              <i class="fa-solid fa-chevron-down"></i>
+            </div>
+            <div class="hide-service hide">
+              <div class="item"><a href="#">合作招商</a></div>
+              <div class="item"><a href="#">學習中心</a></div>
+              <div class="item"><a href="#">商家後台</a></div>
+              <div class="item"><a href="#">京邁工作台</a></div>
+              <div class="item"><a href="#">商家幫助</a></div>
+              <div class="item"><a href="#">規則平台</a></div>
+            </div>
+          </li>
+          <span class="line"></span>
+          <li class="pp gps">
+            <div class="current">
+              <span> 網站導航</span>
+              <i class="fa-solid fa-chevron-down"></i>
+            </div>
+            <div class="hide"></div>
+          </li>
+          <span class="line"></span>
+          <li class="phone pp">
+            <div class="current">
+              <span> 手機京東</span>
+            </div>
+            <div class="hide"></div>
+          </li>
+          <span class="line"></span>
+          <li>
+            <a href="#">網站無障礙</a>
+          </li>
+        </ul>
+      </div>
+    </div>
+  </body>
+</html>
